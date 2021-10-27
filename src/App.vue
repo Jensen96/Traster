@@ -1,9 +1,11 @@
 <template>
-  <grid
-        :entries="gridData"
-        :columns="gridColumns"
-      >
-      </grid>
+    <v-container>
+      <grid
+          :entries="gridData"
+          :columns="gridColumns"
+        >
+        </grid>
+    </v-container>
 </template>
 
 <script>
