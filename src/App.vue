@@ -1,19 +1,27 @@
 <template>
-  <grid
-        :entries="gridData"
-        :columns="gridColumns"
-      >
-      </grid>
+    <v-container>
+      <Grid
+          :entries="gridData"
+          :columns="gridColumns"
+        >
+        </Grid>
+        <div data-app>
+            <AddButton
+              :tooltip="tooltip" />
+        </div>
+    </v-container>
 </template>
 
 <script>
 import Grid from './components/Grid';
+import AddButton from './components/AddButton';
 
 export default {
   name: 'App',
 
   components: {
     Grid,
+    AddButton
   },
   props: {
   },
@@ -24,7 +32,8 @@ export default {
       { name: "Stout Cask", brand: "Teeling", rating: "8/10", note: "Try the Rum Cask next", origin: "Ireland" },
       { name: "16", brand: "Lagavulin", rating: "6/10", note: "Smokey boy", origin: "Scotland" },
       { name: "Blended Malt", brand: "Monkey Shoulder", rating: "7/10", note: "", origin: "Scotland" }
-    ]
+    ],
+    tooltip: "Add new column"
   }),
 };
 </script>
